@@ -1,7 +1,6 @@
-let lastRenderTime = 0;
+import { SNAKE_SPEED } from './snake';
 
-// How many times snake moves per second
-const SNAKE_SPEED = 2;
+let lastRenderTime = 0;
 
 function main(currentTime) {
     window.requestAnimationFrame(main);
@@ -10,6 +9,18 @@ function main(currentTime) {
     if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
     lastRenderTime = currentTime;
     // console.log(currentTime);
+    // Game logic
+    update();
+    // Draws everything on the screen
+    draw();
 }
 
 window.requestAnimationFrame(main);
+
+function update() {
+
+}
+
+function draw() {
+
+}
