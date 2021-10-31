@@ -1,4 +1,4 @@
-import { SNAKE_SPEED } from './snake';
+import { update as updateSnake, draw as drawSnake, SNAKE_SPEED } from './snake';
 
 let lastRenderTime = 0;
 
@@ -8,7 +8,6 @@ function main(currentTime) {
     // If snake needs to move
     if (secondsSinceLastRender < 1 / SNAKE_SPEED) return;
     lastRenderTime = currentTime;
-    // console.log(currentTime);
     // Game logic
     update();
     // Draws everything on the screen
@@ -18,9 +17,9 @@ function main(currentTime) {
 window.requestAnimationFrame(main);
 
 function update() {
-
+    updateSnake();
 }
 
 function draw() {
-
+    drawSnake();
 }
