@@ -1,3 +1,5 @@
+import { getInputDirection } from './input';
+
 // How many times snake moves per second
 export const SNAKE_SPEED = 1;
 // An array of x, y positions
@@ -10,12 +12,13 @@ const snakeBody = [
 ];
 
 export function update() {
+    const inputDirection = getInputDirection();
     // Move the snake
     for (let i = snakeBody.length - 2; i >= 0; i--) {
         snakeBody[i + 1] = { ...snakeBody[i] };
     }
-    // snakeBody[0].x += 0;
-    // snakeBody[0].y += 1;
+    snakeBody[0].x += inputDirection.x;
+    snakeBody[0].y += inputDirection.y;
 }
 
 export function draw(gameBoard) {
