@@ -4,11 +4,7 @@ import { getInputDirection } from './input.js';
 export const SNAKE_SPEED = 1;
 // An array of x, y positions
 const snakeBody = [
-    { x: 10, y: 11 },
     { x: 11, y: 11 },
-    { x: 12, y: 11 },
-    { x: 13, y: 11 },
-    { x: 14, y: 11 },
 ];
 
 export function update() {
