@@ -1,4 +1,5 @@
-let food = { x: 0, y: 0 };
+// our css grid system starts at 1 and ends at 21
+let food = { x: 0, y: 1 };
 export function update() {
 
 }
