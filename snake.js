@@ -1,3 +1,4 @@
+import { expandSnake } from './food.js';
 import { getInputDirection } from './input.js';
 
 // How many times snake moves per second
@@ -6,6 +7,7 @@ export const SNAKE_SPEED = 5;
 const snakeBody = [
     { x: 11, y: 11 },
 ];
+let newSegments = 0;
 
 export function update() {
     const inputDirection = getInputDirection();
@@ -24,5 +26,15 @@ export function draw(gameBoard) {
         snakeElement.style.gridColumnStart = segment.x;
         snakeElement.classList.add('snake');
         gameBoard.appendChild(snakeElement);
+    });
+}
+
+export function expandSnake(amount) {
+    newSegments = amount;
+}
+
+export function onSnake(position) {
+    return snakeBody.some((segment) => {
+        return equalPositions(segment, position);
     });
 }
