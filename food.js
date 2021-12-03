@@ -1,10 +1,7 @@
+import { onSnake, expandSnake } from './snake.js';
 // our css grid system starts at 1 and ends at 21
 let food = { x: 0, y: 1 };
 const EXPANSION_RATE = 1;
-
-export function expandSnake(amount) {
-
-}
 
 export function update() {
     if (onSnake(food)) {

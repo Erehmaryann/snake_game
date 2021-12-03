@@ -1,4 +1,4 @@
-import { expandSnake } from './food.js';
+// import { expandSnake } from './food.js';
 import { getInputDirection } from './input.js';
 
 // How many times snake moves per second
