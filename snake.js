@@ -9,7 +9,14 @@ const snakeBody = [
 ];
 let newSegments = 0;
 
+function addSegments() {
+    for (let i = 0; i < newSegments; i++) {
+        snakeBody[snakeBody.length];
+    }
+}
+
 export function update() {
+    addSegments();
     const inputDirection = getInputDirection();
     // Move the snake
     for (let i = snakeBody.length - 2; i >= 0; i--) {
@@ -43,3 +50,4 @@ export function onSnake(position) {
         return equalPositions(segment, position);
     });
 }
+
