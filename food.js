@@ -1,4 +1,5 @@
 import { onSnake, expandSnake } from './snake.js';
+import { randomGridPosition } from './grid.js';
 // our css grid system starts at 1 and ends at 21
 let food = getRandomFoodPosition();
 const EXPANSION_RATE = 5;
